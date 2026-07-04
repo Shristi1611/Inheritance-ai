@@ -14,11 +14,12 @@ memories = [
     "He said the most expensive thing in the world is a closed mind. Keep yours open no matter the cost.",
 ]
 
-async def load():
+
+async def load_demo_data():
     print("Loading demo memories...")
+
     for i, memory in enumerate(memories):
         await cognee.remember(memory)
-        print(f"Remembered {i+1}/{len(memories)}: {memory[:60]}...")
-    print("Done. All memories loaded.")
+        print(f"Loaded {i+1}/{len(memories)}")
 
-asyncio.run(load())
+    print("Demo memories loaded.")

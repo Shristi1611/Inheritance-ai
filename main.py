@@ -8,9 +8,12 @@ from contextlib import asynccontextmanager
 from core.memory import setup_cognee
 from api.routes import router
 
+from core.demo_data import load_demo_data
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await setup_cognee()
+    await load_demo_data()
     print("[startup] Cognee is ready")
     yield
 
