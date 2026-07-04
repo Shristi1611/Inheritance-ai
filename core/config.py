@@ -1,7 +1,6 @@
-import os
 from dotenv import load_dotenv
-
 load_dotenv()
+import os
 
 class Config:
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
