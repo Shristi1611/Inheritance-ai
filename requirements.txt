@@ -1,7 +1,7 @@
 fastapi
 uvicorn[standard]
 gunicorn
-unicorn
+uvicorn[standard]
 
 python-dotenv
 python-multipart
