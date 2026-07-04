@@ -1,6 +1,17 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
+
 load_dotenv()
+
+SYSTEM_ROOT = Path("/tmp/.cognee_system")
+DATA_ROOT = Path("/tmp/.cognee_data")
+
+SYSTEM_ROOT.mkdir(parents=True, exist_ok=True)
+DATA_ROOT.mkdir(parents=True, exist_ok=True)
+
+os.environ["SYSTEM_ROOT_DIRECTORY"] = str(SYSTEM_ROOT)
+os.environ["DATA_ROOT_DIRECTORY"] = str(DATA_ROOT)
 
 import cognee
 
