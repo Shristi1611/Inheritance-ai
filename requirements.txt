@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+gunicorn
+unicorn
+
+python-dotenv
+python-multipart
+aiofiles
+
+groq
+
+cognee[fastembed]
+
+fastembed
+lancedb==0.17.0
+pyarrow==18.0.0
